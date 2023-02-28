@@ -65,7 +65,7 @@ where continent is not null
 --Group by date
 order by 1,2
 
--- Looking at Total Population vs Vaccinations
+-- Looking at Total Population vs Vaccinations 
 
 select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations
 , sum(cast(vac.new_vaccinations as bigint)) over (Partition by dea.location order by dea.location, dea.date) as SumOfVac
