@@ -77,7 +77,7 @@ Join PORTOFOLIO..[covidVaccinationupd] vac
 where dea.continent is not null
 order by 2,3
 
--- Total Vaccinations In each Country Vs population
+-- Total Vaccinations In each Country Vs population 
 
 select dea.location,dea.population, max(cast(total_deaths as int)) as TotalDeathCount,
  max(cast(vac.new_vaccinations as bigint)/dea.population)*100 as PercentPopulationVaccinated
